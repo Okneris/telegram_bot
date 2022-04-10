@@ -10,10 +10,10 @@ def start(message):
         "first_name": message.from_user.first_name,
         "last_name": message.from_user.last_name,
     }
-    getting_message = (
+    greeting_message = (
         f"Hello, {user_info.get('first_name')} {user_info.get('last_name')}!"
     )
-    bot.send_message(message.chat.id, getting_message)
+    bot.send_message(message.chat.id, greeting_message)
 
 
 bot.polling(none_stop=True)
